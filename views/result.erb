@@ -1,0 +1,22 @@
+<!-- this page will list my results -->
+
+<h3>Here are the movies that match your query</h3>
+
+<% @movie_array.each do |movie| %>
+
+<table>
+  <tr>
+    <td align=right>
+    	<%= movie['Year'] %>
+    	&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+    	&nbsp;&nbsp;
+    	<a href=\"/movie/<%= movie['imdbID'] %>\">
+    	<%= movie['Title'] %>
+    	</a>
+    </td>
+  </tr>
+
+</table>
+<% end %>
