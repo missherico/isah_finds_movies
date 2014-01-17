@@ -37,12 +37,20 @@ post '/results' do
 end
 
 
-get '/movie/:imdb' do |imdb_id|
-  imdb_id = params[:imdb]
+get '/movie/:imdb' do
+  id = params[:imdb]
 
-  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:s => search_str})
-  result = JSON.parse(response.body)
+  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:i => id})
+  
+  @movie = JSON.parse(response.body)
+   # result is a hash of all the attributes of one movie
 
+  
+
+  #@a_movie = movie.map do { |movie| movie["Title"], movie["Year"], movie["Director"], movie["Rated"], movie["Runtime"], movie["Genre"], movie["Actors"], movie["Plot"], movie["Poster"], movie["imdbID"]}
+
+
+  erb :movie
 
 end
 
