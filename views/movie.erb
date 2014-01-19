@@ -1,7 +1,39 @@
-# this file will show a movie that is clicked from the
-# results page, and will show all of the following attributes:
-# "Plot", "Released Year", "Rated", "Runtime",
-# "Genre", "Director", and "Actors"
+<!-- this will display each movie with hash results from obdb -->
+
+<h3>All the deets on: </h3>
+
+<!-- this TitlePlot div will float right -->
+<!-- same font, plot will be lite version, serif, italicized -->
+<!-- DIV color: dark red, rounded edges -->
+<!-- plot font: white, title: white, dark grey shadow -->
+<div class=TitlePlot>
+  <h2><%= @movie['Title'] %></h2>
+  <blockquote >
+  <%= @movie['Plot'] %>
+  </blockquote>
+</div>
+
+<!-- This MovieImage will float left -->
+<!-- Then, when mobile, this will sit under the TitlePlot div -->
+<!-- find large size, then constrain it appropriately -->
+<div class=MovieImage>
+  <img src="<%= @movie['Poster'] %>" />
 
 
-MOVIE!!!
+</div>
+
+
+
+<!-- float left, right under TitlePlot div -->
+<!-- what is the best way to do it? create a string of a set of key/val? -->
+
+<%= @movie['Director'] %>
+<%= @movie['Runtime'] %>
+<%= @movie['Genre'] %>
+<%= @movie['Actors'] %>
+
+<%= @movie['Year']%>
+<%= @movie['Rated'] %>
+
+<%= @movie['imdbID'] %>
+<a href="http://www.imdb.com/title/<%=@movie['imdbID'] %>"> imbd </a>

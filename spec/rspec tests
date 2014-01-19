@@ -1,0 +1,17 @@
+rspec tests
+
+per page
+
+movie_app.rb
+should route to each page
+should not route to each page = false
+should render JSON as hash, not nil
+if no movie found, redirect to error page
+
+with get, submit must be not be blank or flag raised
+
+
+erb
+each movie should render all sums of its hashes
+if no image, redirect image placer, image nil
+
