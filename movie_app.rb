@@ -45,7 +45,7 @@ end
 get '/movie/:imdb' do
   id = params[:imdb]
 
-  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:i => id})
+  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:i => id, :plot => "full"})
   
   @movie = JSON.parse(response.body)
    # result is a hash of all the attributes of one movie

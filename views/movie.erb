@@ -1,39 +1,67 @@
 <!-- this will display each movie with hash results from obdb -->
 
-<h3>All the deets on: </h3>
 
 <!-- this TitlePlot div will float right -->
 <!-- same font, plot will be lite version, serif, italicized -->
 <!-- DIV color: dark red, rounded edges -->
 <!-- plot font: white, title: white, dark grey shadow -->
-<div class=TitlePlot>
-  <h2><%= @movie['Title'] %></h2>
-  <blockquote >
-  <%= @movie['Plot'] %>
-  </blockquote>
+
+<div class="row">
+  <br />
+  <div class="col-xs-10 col-xs-offset-1">
+    <h4 align=left><%= @movie['Title'] %></h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-1">
+  	<h5 align=left class="text-muted">Released <%= @movie['Year']%>&nbsp;&nbsp;|&nbsp;&nbsp;Rated <%= @movie['Rated'] %></h5>
+  </div>
+  
+</div>
+
+
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <p class="lead"><%= @movie['Plot'] %> </p>
+  </div>
 </div>
 
 <!-- This MovieImage will float left -->
 <!-- Then, when mobile, this will sit under the TitlePlot div -->
 <!-- find large size, then constrain it appropriately -->
-<div class=MovieImage>
-  <img src="<%= @movie['Poster'] %>" />
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+  <img class="img-responsive" alt="movie pic" src="<%= @movie['Poster'] %>" />
+  <br />
+  </div>
 
+
+<!-- float left, right under TitlePlot div -->
+<!-- what is the best way to do it? create a string of a set of key/val? -->
+<div class="col-xs-10 col-xs-offset-1">
+<table class="table table-striped">
+  <tr>
+    <td align=center>Directed By: <%= @movie['Director'] %></td>
+  </tr>
+  <tr>
+    <td align=center><%= @movie['Runtime'] %> of awesome</td>
+   </tr>
+   <tr>
+   	<td align=center>Genre:&nbsp;<%= @movie['Genre'] %></td>
+  </tr>
+  <tr>
+    <td align=center>Starring: <%= @movie['Actors'] %></td>
+  </tr>
+  <tr>
+    <td align=center>For more info, visit<a href="http://www.imdb.com/title/<%=@movie['imdbID'] %>"> imbd </a></td>
+  </tr>
+</table>
+</div>
 
 </div>
 
 
 
-<!-- float left, right under TitlePlot div -->
-<!-- what is the best way to do it? create a string of a set of key/val? -->
-
-<%= @movie['Director'] %>
-<%= @movie['Runtime'] %>
-<%= @movie['Genre'] %>
-<%= @movie['Actors'] %>
-
-<%= @movie['Year']%>
-<%= @movie['Rated'] %>
 
 <%= @movie['imdbID'] %>
-<a href="http://www.imdb.com/title/<%=@movie['imdbID'] %>"> imbd </a>

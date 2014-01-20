@@ -1,27 +1,38 @@
 <!-- this page will list my results -->
 <!-- Ideally pictures -->
 
-<h3>Here are the movies that match your query</h3>
-
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <br />
+    <h3 align=right>all the movies...</h3>
+    <p class="text-muted" align=right>
+         - click on a movie to see the deets - 
+    </p>
+    <br/>
+  </div>
+</div>
 <% @movie_array.each do |movie| %>
 
-<table>
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+
+<table class="table table-hover" summary="This is what we found with your movie title search.">
   <tr>
-    <td align=right>
-    	<%= movie['Year'] %>
-    	&nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
     <td>
-    	&nbsp;&nbsp;
+    	<%= movie['Year'] %>
+    	
+    </td>
+    <td align=right>
     	<a href="/movie/<%= movie['imdbID'] %>">
     	<%= movie['Title'] %>
     	</a>
     </td>
-    <td>
-    </td>
   </tr>
-
 </table>
+
+</div>
+</div>
 <% end %>
+
 
 <!---  http://top1walls.com/walls/anime-manga/television-test-pattern--1573785-1188x891.jpg  -->
