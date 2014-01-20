@@ -33,7 +33,7 @@ post '/results' do
     #comparator - write custom sort function, make comparator,
     # if item on left to be first -1, right +1, equal 0  <=>
     
-  @movie_array = result["Search"].sort_by { |movie| movie["Year"]}.select { |movie| movie["Type"] == "movie"}
+  @movie_array = result["Search"].sort_by { |movie| movie["Year"]}
 
 
 
@@ -45,7 +45,7 @@ end
 get '/movie/:imdb' do
   id = params[:imdb]
 
-  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:i => id, :plot => "full"})
+  response = Typhoeus.get("http://www.omdbapi.com/", :params => {:i => id})
   
   @movie = JSON.parse(response.body)
    # result is a hash of all the attributes of one movie
