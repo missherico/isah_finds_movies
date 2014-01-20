@@ -1,14 +1,22 @@
 <!-- create form -->
-<h3>search any movie to the whole gist of it all.</h3>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 title">
+      <h3>search any movie to the whole gist of it all.</h3>
+    </div>
+  </div>
 
-<form action="/results" method="POST">
-  <label for="movie">Search for:</label>
-  <input id="movie" name="movie" type="text" />
-  <input name="commit" type="submit" value="Search" /> 
+  <div class="row">
+  	<div class="col-xs-8 col-xs-offset-2 title">
 
-
-</form>
-
+      <form action="/results" method="POST" class="form" role="form">
+        <!-- <label for="movie">Search for:</label>  -->
+        <div class="form-group">
+          <input id="movie" name="movie" type="text" class="form-control" placeholder="&nbsp;Search here, Press enter"/>
+        </div>
+      </form>
+    </div>
+  </div>
+  
 <!-- http://lh4.googleusercontent.com/-KJDhxhCo_9A/UV4KOWdUdCI/AAAAAAAAQno/Sp9FdXsm2Ao/s1600/fear-tv-lady.jpg -->
 
 <!-- http://flikie.s3.amazonaws.com/ImageStorage/84/844b62292bdb4d248fd7db5d685afb23.jpg -->

@@ -4,14 +4,21 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
 	</head>
 
 
 	<body> 
-      <h1> You, movie buff, you. </h2>
-	  <%= yield %>  
-
+      <div class="container">
+        <div class="row">
+        	<div class="col-xs-12">
+        	  <h1 class="text-right"> You, movie buff, you. </h2>
+        	</div>
+        </div>
+        <div class="row">
+	      <%= yield %>  
+        </div>
+      </div>
 	</body>
 
 
