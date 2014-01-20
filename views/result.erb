@@ -2,30 +2,32 @@
 <!-- Ideally pictures -->
 
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1">
-    <br />
+  <div class="transparentdiv col-xs-10 col-xs-offset-1">
     <h3 align=right>all the movies...</h3>
-    <p class="text-muted" align=right>
-         - click on a movie to see the deets - 
+    <p align=right>
+        click on a movie to see the deets
     </p>
     <br/>
   </div>
 </div>
 <% @movie_array.each do |movie| %>
-
+<br />
 <div class="row">
 <div class="col-xs-10 col-xs-offset-1">
 
 <table class="table table-hover" summary="This is what we found with your movie title search.">
   <tr>
     <td>
+        <p class="para">
     	<%= movie['Year'] %>
-    	
+    	</p>
     </td>
     <td align=right>
+        <p class="para">
     	<a href="/movie/<%= movie['imdbID'] %>">
     	<%= movie['Title'] %>
     	</a>
+        </p>
     </td>
   </tr>
 </table>

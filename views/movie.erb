@@ -1,11 +1,7 @@
 <!-- this will display each movie with hash results from obdb -->
 
 
-<!-- this TitlePlot div will float right -->
-<!-- same font, plot will be lite version, serif, italicized -->
-<!-- DIV color: dark red, rounded edges -->
-<!-- plot font: white, title: white, dark grey shadow -->
-
+<div class="transparentdiv row">
 <div class="row">
   <br />
   <div class="col-xs-10 col-xs-offset-1">
@@ -15,53 +11,46 @@
 
 <div class="row">
   <div class="col-xs-8 col-xs-offset-1">
-  	<h5 align=left class="text-muted">Released <%= @movie['Year']%>&nbsp;&nbsp;|&nbsp;&nbsp;Rated <%= @movie['Rated'] %></h5>
+  	<h5 align=left>Released <%= @movie['Year']%>&nbsp;&nbsp;|&nbsp;&nbsp;Rated <%= @movie['Rated'] %></h5>
   </div>
   
 </div>
 
 
+
 <div class="row">
   <div class="col-xs-10 col-xs-offset-1">
-    <p class="lead"><%= @movie['Plot'] %> </p>
+    <p class="lead para"><%= @movie['Plot'] %> </p>
   </div>
-</div>
+  <br />
+  <br />
 
+</div>
+</div>
 <!-- This MovieImage will float left -->
 <!-- Then, when mobile, this will sit under the TitlePlot div -->
 <!-- find large size, then constrain it appropriately -->
 <div class="row">
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+  <br />
   <img class="img-responsive" alt="movie pic" src="<%= @movie['Poster'] %>" />
   <br />
-  </div>
+</div>
+
+<br />
+<br />
 
 
-<!-- float left, right under TitlePlot div -->
-<!-- what is the best way to do it? create a string of a set of key/val? -->
-<div class="col-xs-10 col-xs-offset-1">
-<table class="table table-striped">
-  <tr>
-    <td align=center>Directed By: <%= @movie['Director'] %></td>
-  </tr>
-  <tr>
-    <td align=center><%= @movie['Runtime'] %> of awesome</td>
-   </tr>
-   <tr>
-   	<td align=center>Genre:&nbsp;<%= @movie['Genre'] %></td>
-  </tr>
-  <tr>
-    <td align=center>Starring: <%= @movie['Actors'] %></td>
-  </tr>
-  <tr>
-    <td align=center>For more info, visit<a href="http://www.imdb.com/title/<%=@movie['imdbID'] %>"> imbd </a></td>
-  </tr>
-</table>
+<div class="transparentdiv col-xs-12 col-sm-6 col-md-6">
+  <br />
+  <br />
+  <p align=right>Directed By: <%= @movie['Director'] %></p>
+  <p align=right><%= @movie['Runtime'] %> of awesome</p>
+  <p align=right>Genre:&nbsp;<%= @movie['Genre'] %></p>
+  <p align=right>Starring: <%= @movie['Actors'] %></p>
+  <p align=right>For more info, visit<a href="http://www.imdb.com/title/<%=@movie['imdbID'] %>"> imbd </a></p> 
+  <br />
+ 
 </div>
 
 </div>
-
-
-
-
-<%= @movie['imdbID'] %>

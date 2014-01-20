@@ -1,5 +1,119 @@
-.frontpagexs
+/*font-family: 'Sacramento', cursive;
+font-family: 'Didact Gothic', sans-serif;*/
+
+.transparentdiv
 {
-  background-image: url(http://midatlanticnostalgiaconvention.com/wp-content/uploads/2012/02/Drive-In-Movie-Theater.jpg);
-  height: 50%;
+	background: rgba(255,255,255, 0.8);
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+}
+
+
+.header3
+{
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+
+a:link { color: #69c133; text-decoration: none !important;} /* unvisited links */
+a:visited { color: #69c133; text-decoration: none !important;} /* visited links */
+a:hover { color: #69c133; font-weight: bold; text-decoration: none !important; } /* user hovers */
+a:active { color: #69c133; text-decoration: none !important;} /* active links */
+
+
+/* Extra small devices (phones, less than 768px) */
+@media(max-width: 500px) {
+	.top {
+	  font-family: 'Sacramento', cursive;
+	  font-size: 40px;
+	  color: #87ded6;
+	  font-weight: bold;}
+
+.bgindex { 
+      background: url('http://1.bp.blogspot.com/_m2ROknKYux4/TOH5FaK8W2I/AAAAAAAABAQ/zQ4pI5cjAFI/s1600/Gilda%2BRita%2BHayworth%2Bvintage%2Bmovie%2Bposter%2BWalterfilm%2BMuseum.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+.para
+{
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: bold;
+}
+
+
+}
+/* Small devices (tablets, 768px and up) */
+@media(min-width: 501px) and (max-width:767px) {
+	.top {
+	  font-family: 'Sacramento', cursive;
+	  font-size: 60px;
+	  color: #87ded6;
+	  font-weight: bold;
+}
+
+.bgindex { 
+      background: url('http://ayay.co.uk/backgrounds/vintage_movie_posters/french/METROPOLIS.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+.para
+{
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: bold;
+}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media(min-width: 768px) and (max-width:898px){
+	.top {
+	  font-family: 'Sacramento', cursive;
+	  font-size: 85px;
+      color: #87ded6;
+	  font-weight: bold;}
+
+.bgindex { 
+      background: url('http://cdn1.deckss.com/vintage-film-poster-shop-london.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+.para
+{
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: bold;
+}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media(min-width: 899px) {
+	.top {
+	  font-family: 'Sacramento', cursive;
+	  font-size: 98px;
+	  color: #87ded6;
+	  font-weight: bold;}
+.bgindex { 
+      background: url('http://images5.fanpop.com/image/photos/24900000/Douglas-Fairbanks-with-movie-camera-1919-silent-movies-24997769-1329-912.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+.para
+{
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: bold;
+}
+
 }
